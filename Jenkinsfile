@@ -22,9 +22,9 @@ node{
       sh "${mvnHome}/bin/mvn  -B -DskipTests clean package"
       }
        }, secondbranch: {
-       stage('checkstyle'){
+       stage('findbug'){
           def mvnHome = tool name: 'maven-3.6.1', type: 'maven'
-           sh "${mvnHome}/bin/mvn checkstyle:checkstyle"
+           sh "${mvnHome}/bin/mvn findbug:findbug"
           checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
        }
 }, failFast: false
