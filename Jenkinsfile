@@ -25,7 +25,7 @@ node{
        stage('Code Quality Check'){
           def mvnHome = tool name: 'maven-3.6.1', type: 'maven'
            sh "${mvnHome}/bin/mvn findbugs:findbugs"
-         findbugs canComputeNew: false, defaultEncoding: '', excludePattern: '', healthy: '80', includePattern: '', pattern: '**/findbugs.xml', unHealthy: ''
+         findbugs canComputeNew: false, defaultEncoding: '', excludePattern: '', healthy: '99%', includePattern: '', pattern: '**/findbugs.xml', unHealthy: ''
          // checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
        }
 }, failFast: false
