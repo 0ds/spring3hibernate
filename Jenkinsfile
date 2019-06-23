@@ -3,7 +3,7 @@ properties([parameters([choice(choices: ['master', 'branch1', 'branch2'], descri
 node{
   
       stage('email-notification'){
-          mail bcc: '', body: 'Built Fail', cc: '', from: '', replyTo: '', subject: 'Jenkins report', to: "${_MY_EMAIL}"
+          mail bcc: '', body: 'Built Fail', cc: '', from: '', replyTo: '', subject: 'Jenkins report', to: "odds.inbox@gmail.com"
 }
       stage('SCM checkout')
     {
