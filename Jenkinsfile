@@ -24,7 +24,7 @@ node{
        }, secondbranch: {
        stage('findbug'){
           def mvnHome = tool name: 'maven-3.6.1', type: 'maven'
-           sh "${mvnHome}/bin/mvn findbug:findbug"
+           sh "${mvnHome}/bin/mvn findbugs:findbugs"
           checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
        }
 }, failFast: false
